@@ -1,3 +1,5 @@
+from textwrap import fill
+
 class HuffmanTree(object):
     def __init__(self, left=None, right=None):
         self.left = left
@@ -53,11 +55,14 @@ def huffmanCoding(string):
         print(" %-9r | %10d | %12s" % (char, frequency, huffmanCode[char]))
 
     count = 0
-    print("\nThe encoded string is:")
+    str = ""
+    #print("\nThe encoded string is:")
     for char in string:
-        print(huffmanCode[char], end='')
+        #print(huffmanCode[char], end='')
+        str += huffmanCode[char]
         count += len(huffmanCode[char])
-
+    print("\nThe encoded string is:")
+    print(fill(str, width=75))
     print("\n\nThe total length of coding is:")
     print(count)
 
