@@ -68,9 +68,9 @@ def getString(filename):  # Get graph from file
     return string
 
 string = "mississippi"
-print(string)
+print("Input 1: " + string)
 huffmanCoding(string)
 
 stringFile = getString('snark.txt')
-print('\nsnark.txt:')
+print('\nInput 2: snark.txt:')
 huffmanCoding(stringFile)
